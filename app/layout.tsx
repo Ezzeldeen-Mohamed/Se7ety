@@ -7,6 +7,7 @@ import { AuthProvider } from "@/contexts/auth-context"
 
 export const metadata: Metadata = {
   title: "صحتي - خدمات صحية منزلية",
+  icons: "/.png",
   description: "تطبيق ذكي للخدمات الصحية المنزلية عبر الصيدليات المحلية",
   generator: "v0.app",
 }
