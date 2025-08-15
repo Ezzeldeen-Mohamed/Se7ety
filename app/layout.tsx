@@ -7,8 +7,12 @@ import { AuthProvider } from "@/contexts/auth-context"
 
 export const metadata: Metadata = {
   title: "صحتي - خدمات صحية منزلية",
-  icons: "/.png",
   description: "تطبيق ذكي للخدمات الصحية المنزلية عبر الصيدليات المحلية",
+  icons: {
+    icon: "/logo.png", // for browser tabs
+    shortcut: "/logo.png", // optional
+    apple: "/apple-touch-icon.png" // optional for iOS
+  },
   generator: "v0.app",
 }
 
@@ -20,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
+        <link rel="icon" href="/logo.png" />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
