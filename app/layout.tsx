@@ -9,9 +9,15 @@ export const metadata: Metadata = {
   title: "صحتي - خدمات صحية منزلية",
   description: "تطبيق ذكي للخدمات الصحية المنزلية عبر الصيدليات المحلية",
   icons: {
-    icon: "/logo.png", // for browser tabs
-    shortcut: "/logo.png", // optional
-    apple: "/apple-touch-icon.png" // optional for iOS
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", type: "image/png" } // fallback
+    ],
+    shortcut: "/logo.png",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ]
   },
   generator: "v0.app",
 }
@@ -24,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
-        <link rel="icon" href="/logo.png" />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
